@@ -1,0 +1,232 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* FIXED BACKGROUND */
+.page-bg {
+  position: fixed;
+  inset: 0;
+  background: url("img.webp") center / cover no-repeat;
+  z-index: -10;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px;
+  z-index: 1000;
+}
+
+/* BODY OFFSET */
+body {
+  padding-top: 80px;
+}
+
+/* LOGO */
+.logo h2 {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  font-size: 11px;
+  color: #777;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+}
+
+.nav-link {
+  margin: 0 14px;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* BUTTONS */
+.auth-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-outline {
+  padding: 8px 18px;
+  border: 1px solid #000;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.btn-filled {
+  padding: 8px 18px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  letter-spacing: 6px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* HERO BUTTON */
+.btn-hero {
+  padding: 14px 32px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* CONTENT */
+.content {
+  min-height: 120vh;
+  padding: 120px 70px;
+  color: #fff;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 12px;
+  }
+
+  body {
+    padding-top: 140px;
+  }
+
+  /* LOGO */
+  .logo h2 {
+    font-size: 18px;
+  }
+
+  /* NAV LINKS */
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    margin: 6px 10px;
+    font-size: 14px;
+  }
+
+  /* BUTTONS */
+  .auth-buttons {
+    gap: 8px;
+  }
+
+  .btn-outline,
+  .btn-filled {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero {
+    height: 90vh;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    letter-spacing: 3px;
+  }
+
+  .hero-content p {
+    font-size: 14px;
+  }
+
+  .btn-hero {
+    padding: 12px 24px;
+    font-size: 13px;
+  }
+
+  /* CONTENT */
+  .content {
+    padding: 80px 20px;
+    min-height: auto;
+  }
+}
+
+/* ================= VERY SMALL PHONES ================= */
+@media (max-width: 480px) {
+
+  .hero-content h1 {
+    font-size: 24px;
+    letter-spacing: 2px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+  }
+}
