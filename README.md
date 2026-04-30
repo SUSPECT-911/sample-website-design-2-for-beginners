@@ -7,7 +7,7 @@ A simple and clean website design built using **HTML**, **CSS**, and **JavaScrip
 This project is created to help beginners understand basic website structure, styling, and simple interactivity.
 
 ## 🌐 Live Demo
-https://suspect-911.github.io/sample-website-design-2-for-beginners/
+https://nageshl-12.github.io/sample-website-design-2-for-beginners/
 
 ## 🔧 Technologies Used
 - HTML5
